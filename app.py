@@ -357,3 +357,10 @@ with right:
         st.caption("Hinweis: Ein Export ist keine CRM-Synchronisierung. Für externe Dienste sind zusätzliche Integrationen nötig.")
 
 st.markdown('<div class="footer">JKBuB Sales Copilot · Lern- und Konzeptprototyp · Menschliche Prüfung vor Versand</div>', unsafe_allow_html=True)
+from openai import OpenAI
+import streamlit as st
+
+client = OpenAI(
+    base_url="https://ollama.com/v1",
+    api_key=st.secrets["OLLAMA_API_KEY"]
+)
